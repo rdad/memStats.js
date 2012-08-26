@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title>memStats - basic example</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				margin: 0;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+
+		<script src="../build/memStats.js"></script>
+		<script>
+
+			var mem = new memStats(), p;
+			document.body.appendChild( mem.domElement );
+                        
+                        function LeakMemory(){
+                            for(var i = 0; i < 5000; i++){
+                                p = document.createElement( 'div' );
+                                p.onclick = function() { /* ... */ };
+                            }
+                        }
+
+			setInterval( function () {
+
+                            LeakMemory();
+                            mem.update();
+
+			}, 1000 / 60 );
+
+		</script>
+	</body>
+</html>
