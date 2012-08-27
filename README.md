@@ -6,6 +6,10 @@ memStats.js
 A simple 3 part box that will help monitoring your browser memory.
 Using window.performance.memory object (webkit only)
 
+Black box: total memory
+Blue box : Allocated memory
+Pink box : In use memory
+
 ### Usage ###
 
 ```javascript

@@ -7,10 +7,12 @@
 .metadata
 bin/
 tmp/
+utils/
 *.tmp
 *.bak
 *.swp
 *~.nib
+*.py
 local.properties
 .classpath
 .settings/
@@ -137,7 +139,6 @@ Desktop.ini
 *.egg
 *.egg-info
 dist
-build
 eggs
 parts
 bin
