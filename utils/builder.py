@@ -1,6 +1,6 @@
 import os
 
-rev     = 0
+rev     = 1
 source  = '../src/memStats.js'
 build   = '../build/memStats.js'
 header  = '// memStats.js r' + str( rev ) + ' - http://github.com/rdad/memStats.js\n'
